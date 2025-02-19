@@ -2,8 +2,12 @@ package ceiti.da;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class Login {
     public static WebDriver driver;
@@ -19,6 +23,9 @@ public class Login {
 
     @FindBy(xpath = "//*[text()='Products']")
     WebElement titleEl;
+
+    @FindBy(xpath = "//*[@class='inventory_item']")
+    private List<WebElement> productsEl;
 
     public void clickSend(){
         sendEl.click();
@@ -39,5 +46,9 @@ public class Login {
 
     public void setUserName(String userNameParam) {
         loginNameEl.sendKeys(userNameParam);
+    }
+
+    public int getProductNumbers() {
+        return productsEl.size();
     }
 }

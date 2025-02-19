@@ -15,7 +15,6 @@ public class SeleniumJava {
         System.setProperty("webdriver.chrome.driver", "D:\\Downland\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--headless");
         ChromeDriver driver = new ChromeDriver(options);
         return driver;
     }

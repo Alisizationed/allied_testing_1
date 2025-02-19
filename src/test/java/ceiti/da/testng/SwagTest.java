@@ -16,6 +16,7 @@ public class SwagTest {
     public static String USERNAME = "standard_user";
     public static String PASSWORD = "secret_sauce";
     public static String TITLE = "Products";
+    public static int PRODUCTS_NUMBER = 6;
 
     @BeforeClass
     public void startTest() {
@@ -37,6 +38,22 @@ public class SwagTest {
         Assert.assertEquals(login.getTitleText(), TITLE);
 
         System.out.println();
+    }
+
+    @Test
+    public void secondTest() {
+        firstTest();
+        Login login = new Login(driver);
+
+        Assert.assertEquals(login.getProductNumbers(), PRODUCTS_NUMBER);
+
+        System.out.println();
+    }
+
+    @Test
+    public void thirdTest() {
+        firstTest();
+
     }
 
     @AfterClass
