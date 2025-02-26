@@ -24,9 +24,10 @@ public class SwagTest {
     }
 
     @Test
-    public void firstTest() {
+    public void firstTest() throws InterruptedException {
         logger.info("Entered first test");
         driver.get(URL_TEST);
+        Thread.sleep(2000);
         logger.info("Entered site " + URL_TEST);
         driver.manage().window().minimize();
 
@@ -35,6 +36,7 @@ public class SwagTest {
         login.setUserName(USERNAME);
         login.setPassword(PASSWORD);
         logger.info("Entered username = " + USERNAME + " , password = " + PASSWORD);
+        Thread.sleep(2000);
         login.clickSend();
         logger.info("Clicked log in button");
 
@@ -47,7 +49,7 @@ public class SwagTest {
     }
 
     @Test
-    public void secondTest() {
+    public void secondTest() throws InterruptedException {
         firstTest();
         ProductsCart productsCart = new ProductsCart(driver);
 
