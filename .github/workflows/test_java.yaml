@@ -3,7 +3,7 @@ name: 01_01_02_24_hello_world
 on:
   push:
     branches:
-      - main
+      - master
 env:
   TASK_FOLDER: "${{ github.workspace }}"
 
