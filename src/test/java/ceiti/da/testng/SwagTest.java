@@ -20,7 +20,7 @@ public class SwagTest {
 
     @BeforeClass
     public void startTest() {
-        SwagTest.driver = SeleniumJava.setLocalDriver();
+        SwagTest.driver = SeleniumJava.getRemoteDriver();
     }
 
     @Test
