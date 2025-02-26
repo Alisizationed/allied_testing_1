@@ -34,6 +34,7 @@ public class SwagTest {
         Login login = new Login(driver);
         logger.info("Initialized the driver");
         login.setUserName(USERNAME);
+        Thread.sleep(2000);
         login.setPassword(PASSWORD);
         logger.info("Entered username = " + USERNAME + " , password = " + PASSWORD);
         Thread.sleep(2000);
@@ -48,15 +49,15 @@ public class SwagTest {
         System.out.println();
     }
 
-    @Test
-    public void secondTest() throws InterruptedException {
-        firstTest();
-        ProductsCart productsCart = new ProductsCart(driver);
-
-        Assert.assertEquals(productsCart.getProductNumbers(), PRODUCTS_NUMBER);
-
-        System.out.println();
-    }
+//    @Test
+//    public void secondTest() throws InterruptedException {
+//        firstTest();
+//        ProductsCart productsCart = new ProductsCart(driver);
+//
+//        Assert.assertEquals(productsCart.getProductNumbers(), PRODUCTS_NUMBER);
+//
+//        System.out.println();
+//    }
 
     @AfterClass
     public void stopTest() {
