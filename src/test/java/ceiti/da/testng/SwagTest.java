@@ -1,16 +1,16 @@
 package ceiti.da.testng;
 
 import ceiti.da.Login;
+import ceiti.da.ProductsCart;
 import ceiti.da.utils.SeleniumJava;
-import org.openqa.selenium.By;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.net.URL;
-
 public class SwagTest {
+    public Logger logger = LogManager.getLogger(SwagTest.class);
     public static WebDriver driver;
     public static String URL_TEST = "https://www.saucedemo.com/";
     public static String USERNAME = "standard_user";
@@ -25,17 +25,23 @@ public class SwagTest {
 
     @Test
     public void firstTest() {
+        logger.info("Entered first test");
         driver.get(URL_TEST);
+        logger.info("Entered site " + URL_TEST);
         driver.manage().window().minimize();
 
         Login login = new Login(driver);
+        logger.info("Initialized the driver");
         login.setUserName(USERNAME);
         login.setPassword(PASSWORD);
+        logger.info("Entered username = " + USERNAME + " , password = " + PASSWORD);
         login.clickSend();
+        logger.info("Clicked log in button");
 
 //        String actualResult = login.getTitle();
 
         Assert.assertEquals(login.getTitleText(), TITLE);
+        logger.info("Logged in");
 
         System.out.println();
     }
@@ -43,17 +49,11 @@ public class SwagTest {
     @Test
     public void secondTest() {
         firstTest();
-        Login login = new Login(driver);
+        ProductsCart productsCart = new ProductsCart(driver);
 
-        Assert.assertEquals(login.getProductNumbers(), PRODUCTS_NUMBER);
+        Assert.assertEquals(productsCart.getProductNumbers(), PRODUCTS_NUMBER);
 
         System.out.println();
-    }
-
-    @Test
-    public void thirdTest() {
-        firstTest();
-
     }
 
     @AfterClass

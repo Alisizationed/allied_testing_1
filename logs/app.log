@@ -1,0 +1,18 @@
+2025-02-26 13:29:19 [main] INFO  ceiti.da.testng.SwagTest  - Entered first test
+2025-02-26 13:29:20 [main] INFO  ceiti.da.testng.SwagTest  - Entered site https://www.saucedemo.com/
+2025-02-26 13:29:21 [main] INFO  ceiti.da.testng.SwagTest  - Initialized the driver
+2025-02-26 13:29:21 [main] INFO  ceiti.da.testng.SwagTest  - Entered username = standard_user , password = secret_sauce
+2025-02-26 13:29:21 [main] INFO  ceiti.da.testng.SwagTest  - Clicked log in button
+2025-02-26 13:29:21 [main] INFO  ceiti.da.testng.SwagTest  - Logged in
+2025-02-26 13:31:21 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered first test
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered site https://www.saucedemo.com/
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Initialized the driver
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered username = standard_user , password = secret_sauce
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Clicked log in button
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Logged in
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered first test
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered site https://www.saucedemo.com/
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Initialized the driver
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Entered username = standard_user , password = secret_sauce
+2025-02-26 13:31:22 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Clicked log in button
+2025-02-26 13:31:23 [TestNG-test-Test Basics 1-1] INFO  ceiti.da.testng.SwagTest  - Logged in

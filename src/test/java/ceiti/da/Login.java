@@ -24,16 +24,13 @@ public class Login {
     @FindBy(xpath = "//*[text()='Products']")
     WebElement titleEl;
 
-    @FindBy(xpath = "//*[@class='inventory_item']")
-    private List<WebElement> productsEl;
-
-    public void clickSend(){
-        sendEl.click();
-    }
-
     public Login(WebDriver driver) {
         Login.driver = driver;
         PageFactory.initElements(driver, this);
+    }
+
+    public void clickSend(){
+        sendEl.click();
     }
 
     public String getTitleText(){
@@ -46,9 +43,5 @@ public class Login {
 
     public void setUserName(String userNameParam) {
         loginNameEl.sendKeys(userNameParam);
-    }
-
-    public int getProductNumbers() {
-        return productsEl.size();
     }
 }
